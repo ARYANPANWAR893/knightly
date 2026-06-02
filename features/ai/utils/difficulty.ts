@@ -5,12 +5,12 @@ export type AIDifficulty =
 
 export function
   getDifficultyConfig(
-    difficulty:
+    hardy:
       AIDifficulty,
     adaptation = 0
   ) {
   switch (
-    difficulty
+    hardy
   ) {
     case 'easy':
       return {

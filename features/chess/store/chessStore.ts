@@ -18,7 +18,7 @@ type ChessMode =
 
 type AIDifficulty =
   | 'medium'
-  | 'difficult';
+  | 'hard';
 
 type ChessStore = {
   gameMode:
