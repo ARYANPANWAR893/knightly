@@ -32,7 +32,7 @@ self.onmessage =
 
     const handler =
       (
-        e
+        e: MessageEvent
       ) => {
         const line =
           e.data;

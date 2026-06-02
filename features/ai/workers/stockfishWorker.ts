@@ -1,19 +1,19 @@
 /// <reference lib="webworker" />
 
-const engine =
+const stockfishEngine =
   new Worker(
     '/stockfish/stockfish.js'
   );
 
-engine.postMessage(
+stockfishEngine.postMessage(
   'uci'
 );
 
-engine.postMessage(
+stockfishEngine.postMessage(
   'ucinewgame'
 );
 
-engine.postMessage(
+stockfishEngine.postMessage(
   'isready'
 );
 
@@ -29,7 +29,7 @@ self.onmessage =
 
     const handler =
       (
-        e
+        e: MessageEvent
       ) => {
         const line =
           e.data;
@@ -45,7 +45,7 @@ self.onmessage =
             'bestmove'
           )
         ) {
-          engine.removeEventListener(
+          stockfishEngine.removeEventListener(
             'message',
             handler
           );
@@ -62,16 +62,16 @@ self.onmessage =
         }
       };
 
-    engine.addEventListener(
+    stockfishEngine.addEventListener(
       'message',
       handler
     );
 
-    engine.postMessage(
+    stockfishEngine.postMessage(
       `position fen ${fen}`
     );
 
-    engine.postMessage(
+    stockfishEngine.postMessage(
       `go depth ${depth}`
     );
   };

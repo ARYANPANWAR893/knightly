@@ -1,6 +1,10 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Chess } from 'chess.js';
+import type {
+  AIDifficulty,
+} from '../../ai/utils/difficulty';
+
 
 export type GameMode =
   | 'blitz'
@@ -16,9 +20,7 @@ type ChessMode =
   | 'local'
   | 'ai';
 
-type AIDifficulty =
-  | 'medium'
-  | 'hard';
+
 
 type ChessStore = {
   gameMode:
