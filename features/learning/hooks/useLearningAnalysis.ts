@@ -135,17 +135,6 @@ export function
             tactical.reason
           );
 
-        console.log(
-          'SMART LEARNING:',
-          {
-            before,
-            after,
-            cpLoss,
-            category,
-            tactical,
-          }
-        );
-
         setFeedback({
           evaluation:
             after.evaluation,

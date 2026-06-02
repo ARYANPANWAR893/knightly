@@ -12,11 +12,7 @@ export function initPostHog() {
     initialized
   )
     return;
-console.log(
-  'POSTHOG INIT',
-  process.env
-    .NEXT_PUBLIC_POSTHOG_KEY
-);
+
   posthog.init(
     process.env.NEXT_PUBLIC_POSTHOG_KEY!,
     {

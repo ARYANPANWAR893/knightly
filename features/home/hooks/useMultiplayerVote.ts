@@ -49,10 +49,6 @@ export function
       value
     );
 
-    console.log(
-      'MULTIPLAYER VOTE:',
-      value
-    );
   }
 
   function resetVote() {
