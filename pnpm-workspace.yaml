@@ -1,0 +1,9 @@
+allowBuilds:
+  core-js: true
+  protobufjs: true
+  sharp: false
+  stockfish: true
+  unrs-resolver: false
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver

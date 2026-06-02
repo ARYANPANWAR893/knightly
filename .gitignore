@@ -1,0 +1,27 @@
+# dependencies
+node_modules
+
+# next
+.next
+out
+
+# env
+.env
+.env.local
+.env.production
+
+# logs
+*.log
+pnpm-debug.log*
+
+# mac
+.DS_Store
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# backups
+backups
